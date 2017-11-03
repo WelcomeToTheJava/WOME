@@ -1,0 +1,6 @@
+package estados;
+
+public interface SelectorMapa {
+	public String mapa();
+	public String titulo();
+}

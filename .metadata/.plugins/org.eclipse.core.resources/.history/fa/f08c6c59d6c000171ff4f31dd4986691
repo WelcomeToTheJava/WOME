@@ -1,0 +1,15 @@
+package estados;
+
+public class Aris implements SelectorMapa{
+
+	@Override
+	public String mapa() {
+		return "Aris";
+	}
+
+	@Override
+	public String titulo() {
+		return "Aris";
+	}
+
+}

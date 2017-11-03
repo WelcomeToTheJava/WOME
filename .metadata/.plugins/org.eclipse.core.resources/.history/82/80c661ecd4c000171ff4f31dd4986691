@@ -1,0 +1,10 @@
+package estados;
+
+public class Eodrim implements SelectorMapa{
+
+	@Override
+	public String mapa() {
+		return "Eodrim";
+	}
+
+}

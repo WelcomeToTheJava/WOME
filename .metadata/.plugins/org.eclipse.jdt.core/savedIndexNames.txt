@@ -13,7 +13,6 @@ INDEX VERSION 1.130+C:\Users\123\Desktop\TpTaller\.metadata\.plugins\org.eclipse
 3919325409.index
 2247404230.index
 3554032198.index
-886789409.index
 2563438222.index
 4137163996.index
 1085796001.index

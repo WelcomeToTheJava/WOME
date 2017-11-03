@@ -1,0 +1,16 @@
+package estados;
+
+public class MapaCancelado implements SelectorMapa{
+
+	@Override
+	public String mapa() {
+		return "";
+	}
+
+	@Override
+	public String titulo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
