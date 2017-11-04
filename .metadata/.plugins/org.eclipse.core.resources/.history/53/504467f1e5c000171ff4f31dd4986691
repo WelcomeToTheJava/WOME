@@ -1,0 +1,13 @@
+package movimiento;
+
+import java.awt.image.BufferedImage;
+
+public class VerticalSuperior implements Movimiento{
+
+	@Override
+	public BufferedImage movimiento() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

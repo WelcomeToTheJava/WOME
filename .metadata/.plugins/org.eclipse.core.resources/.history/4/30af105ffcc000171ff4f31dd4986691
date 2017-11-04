@@ -1,0 +1,10 @@
+package selectormapas;
+
+public class Aubenor implements SelectorMapa{
+	
+	@Override
+	public String mapa() {
+		return "Aubenor";
+	}
+
+}

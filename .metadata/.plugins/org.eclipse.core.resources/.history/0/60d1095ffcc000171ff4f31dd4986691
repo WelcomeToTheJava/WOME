@@ -1,0 +1,10 @@
+package selectormapas;
+
+public class MapaCancelado implements SelectorMapa{
+
+	@Override
+	public String mapa() {
+		return "";
+	}
+
+}

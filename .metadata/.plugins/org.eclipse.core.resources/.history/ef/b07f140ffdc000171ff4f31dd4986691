@@ -1,0 +1,5 @@
+package selectormapas;
+
+public interface SelectorMapa {
+	public String mapa();
+}

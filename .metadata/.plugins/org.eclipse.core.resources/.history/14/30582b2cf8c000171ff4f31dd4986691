@@ -1,0 +1,40 @@
+package movimiento;
+
+import java.awt.image.BufferedImage;
+
+import entidades.Animacion;
+
+public class VerticalSuperior implements Movimiento{
+
+	private Animacion animacion;
+	
+	public VerticalSuperior(int velMovimiento, BufferedImage [] mov) {
+		this.animacion = new Animacion(velMovimiento, mov);
+	}
+	
+	@Override
+	public BufferedImage movimiento() {
+		return animacion.getFrameActual();
+	}
+
+	@Override
+	public Animacion getAnimacion() {
+		return null;
+	}
+
+	@Override
+	public void reset() {
+		
+	}
+
+	@Override
+	public int actualizarPosicionX() {
+		return 0;
+	}
+
+	@Override
+	public int actualizarPosicionY() {
+		return -1;
+	}
+
+}

@@ -1,0 +1,45 @@
+package movimiento;
+
+import java.awt.image.BufferedImage;
+
+import entidades.Animacion;
+
+public class VerticalInferior implements Movimiento{
+	private Animacion animacion;
+	
+	public VerticalInferior(int velMovimiento, BufferedImage [] mov) {
+		this.animacion = new Animacion(velMovimiento, mov);
+	}
+	
+	@Override
+	public BufferedImage movimiento() {
+		return animacion.getFrameActual();
+	}
+
+	@Override
+	public Animacion getAnimacion() {
+		return animacion;
+	}
+
+	@Override
+	public void reset() {
+		animacion.reset();
+		
+	}
+
+	@Override
+	public float  actualizarPosicionX() {
+		return 0;
+	}
+
+	@Override
+	public float  actualizarPosicionY() {
+		return 1;
+	}
+
+	@Override
+	public int dameIndice() {
+		// TODO Auto-generated method stub
+		return animacion.getFrame();
+	}
+}

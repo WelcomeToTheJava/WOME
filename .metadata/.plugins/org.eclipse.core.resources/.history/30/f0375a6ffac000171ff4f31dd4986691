@@ -1,0 +1,44 @@
+package movimiento;
+
+import java.awt.image.BufferedImage;
+
+import entidades.Animacion;
+
+public class HorizontalIzquierda implements Movimiento{
+	private Animacion animacion;
+	
+	public HorizontalIzquierda(int velMovimiento, BufferedImage [] mov) {
+		this.animacion = new Animacion(velMovimiento, mov);
+	}
+	
+	@Override
+	public BufferedImage movimiento() {
+		return animacion.getFrameActual();
+	}
+
+	@Override
+	public Animacion getAnimacion() {
+		return animacion;
+	}
+
+	@Override
+	public void reset() {
+		animacion.reset();
+	}
+
+	@Override
+	public float  actualizarPosicionX() {
+		return -1;
+	}
+
+	@Override
+	public float  actualizarPosicionY() {
+		return 0;
+	}
+
+	@Override
+	public int dameIndice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

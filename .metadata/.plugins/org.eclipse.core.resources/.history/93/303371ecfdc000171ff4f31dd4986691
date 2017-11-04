@@ -1,0 +1,7 @@
+package selectormapas;
+
+import java.io.Serializable;
+
+public abstract class SelectorMapa implements Serializable{
+	public abstract String mapa();
+}

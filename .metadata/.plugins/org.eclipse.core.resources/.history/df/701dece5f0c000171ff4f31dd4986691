@@ -1,0 +1,12 @@
+package movimiento;
+
+import java.awt.image.BufferedImage;
+
+import entidades.Animacion;
+
+public interface Movimiento {
+	public BufferedImage movimiento();
+	public Animacion getAnimacion();
+	public void reset();
+	public int actualizarPosicion();
+}

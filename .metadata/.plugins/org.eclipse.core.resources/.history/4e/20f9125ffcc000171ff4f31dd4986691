@@ -1,0 +1,10 @@
+package selectormapas;
+
+public class Aris implements SelectorMapa{
+
+	@Override
+	public String mapa() {
+		return "Aris";
+	}
+
+}

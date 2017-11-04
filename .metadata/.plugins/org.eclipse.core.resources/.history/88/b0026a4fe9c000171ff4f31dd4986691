@@ -1,0 +1,20 @@
+package movimiento;
+
+import java.awt.image.BufferedImage;
+
+import entidades.Animacion;
+
+public class DiagonalInferiorIzquierda implements Movimiento{
+	private Animacion animacion;
+	private int velMovimiento;
+	
+	public DiagonalInferiorIzquierda(int velMovimiento, Animacion animacion) {
+		this.animacion = animacion;
+		this.velMovimiento = velMovimiento;
+	}
+	
+	@Override
+	public BufferedImage movimiento() {
+		return animacion.getFrameActual();
+	}
+}

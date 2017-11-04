@@ -1,0 +1,12 @@
+package selectormapas;
+
+import java.io.Serializable;
+
+public class Aris implements SelectorMapa, Serializable{
+
+	@Override
+	public String mapa() {
+		return "Aris";
+	}
+
+}
