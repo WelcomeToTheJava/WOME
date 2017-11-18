@@ -1,0 +1,88 @@
+package entidades;
+
+import java.io.Serializable;
+
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import mensajeria.PaqueteUsuario;
+
+public class EntRegistro implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private String usuario;
+	private String password;
+	private int idPersonaje;
+	
+	public EntRegistro(){
+		
+	}
+
+	public EntRegistro(String usuario, String password, int idPersonaje) {
+		this.usuario = usuario;
+		this.password = password;
+		this.idPersonaje = idPersonaje;
+	}
+	
+	private static EntRegistro estaRegistrado(PaqueteUsuario user, SessionFactory factory) {
+		Session session = factory.openSession();
+		String usuario = user.getUsername();
+		
+		EntRegistro ent = (EntRegistro) session.createQuery(
+				"SELECT r FROM EntRegistro r WHERE usuario =" + "'" + usuario + "'").uniqueResult();
+		session.getSessionFactory().close();
+		session.close();
+		return ent; 
+	}
+	
+	public static boolean registrarUsuario(Acceso conexion, PaqueteUsuario user)  {
+		Session session = conexion.getConfiguration().buildSessionFactory().openSession();
+		session.beginTransaction();
+		
+		if(estaRegistrado(user, session.getSessionFactory()) == null) {
+			EntRegistro reg = new EntRegistro(user.getUsername(), user.getPassword(), 0);
+			try {
+				session.save(reg);
+				session.getTransaction().commit();
+			} catch (HibernateException | SecurityException e) {
+				e.printStackTrace();
+			} finally {
+				session.getSessionFactory().close();
+				session.close();
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getIdPersonaje() {
+		return idPersonaje;
+	}
+
+	public void setIdPersonaje(int idPersonaje) {
+		this.idPersonaje = idPersonaje;
+	}
+
+	@Override
+	public String toString() {
+		return "Registro [usuario=" + usuario + ", password=" + password + ", idPersonaje=" + idPersonaje + "]";
+	}
+}
