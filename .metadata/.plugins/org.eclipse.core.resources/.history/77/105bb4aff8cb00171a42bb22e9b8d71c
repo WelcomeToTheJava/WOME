@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2017 21:33:23 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntInventario" table="inventario">
+        <id name="idInventario" type="int" column = "idInventario" />
+        <property name="manos1" type="int" column = "manos1" />
+        <property name="manos2" type="int" column="manos2" />
+        <property name="pie" type="int" column = "pie" />
+        <property name="cabeza" type="int" column = "cabeza" />
+        <property name="pecho" type="int" column = "pecho" />
+        <property name="accesorio" type="int" column= "accesorio"/>
+    </class>
+</hibernate-mapping>

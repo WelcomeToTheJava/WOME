@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-nov-2017 22:15:35 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="entidades.EntRegistro" table="registro">
+		<id column="usuario" name="usuario" type="string" />
+		<property column="password" name="password" type="string" />
+		<property column="idPersonaje" name="idPersonaje" type="int" />
+	</class>
+</hibernate-mapping>

@@ -1,2 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javafx.scene.shape.Arc"/>
+<fullyQualifiedTypeName name="estados.Aris"/>
+<fullyQualifiedTypeName name="estados.Eodrim"/>
+<fullyQualifiedTypeName name="estados.Aubenor"/>
+<fullyQualifiedTypeName name="estados.SelectorMapa"/>
+<fullyQualifiedTypeName name="movimiento.Movimiento"/>
+<fullyQualifiedTypeName name="movimiento.HorizontalDerecha"/>
+<fullyQualifiedTypeName name="movimiento.VerticalSuperior"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="entidades.Animacion"/>
+<fullyQualifiedTypeName name="movimiento.DiagonalSuperiorIzquierda"/>
+<fullyQualifiedTypeName name="movimiento.VerticalInferior"/>
+<fullyQualifiedTypeName name="movimiento.DiagonalInferiorDerecha"/>
+<fullyQualifiedTypeName name="movimiento.DiagonalSuperiorDerecha"/>
+<fullyQualifiedTypeName name="movimiento.DiagonalInferiorIzquierda"/>
+<fullyQualifiedTypeName name="selectormapas.Aubenor"/>
+<fullyQualifiedTypeName name="selectormapas.SelectorMapa"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="dominio.Item"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="entidades.Registro"/>
+<fullyQualifiedTypeName name="javax.transaction.Transaction"/>
+<fullyQualifiedTypeName name="org.hibernate.HibernateException"/>
+<fullyQualifiedTypeName name="mensajeria.PaqueteUsuario"/>
+<fullyQualifiedTypeName name="entidades.EntRegistro"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+</qualifiedTypeNameHistroy>

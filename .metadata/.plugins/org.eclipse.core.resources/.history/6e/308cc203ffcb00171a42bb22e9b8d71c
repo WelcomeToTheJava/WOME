@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2017 22:22:56 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntMochila" table="ENTMOCHILA">
+        <id name="idMochila" type="int">
+            <column name="IDMOCHILA" />
+            <generator class="assigned" />
+        </id>
+        <property name="item1" type="int">
+            <column name="ITEM1" />
+        </property>
+        <property name="item2" type="int">
+            <column name="ITEM2" />
+        </property>
+        <property name="item3" type="int">
+            <column name="ITEM3" />
+        </property>
+        <property name="item4" type="int">
+            <column name="ITEM4" />
+        </property>
+        <property name="item5" type="int">
+            <column name="ITEM5" />
+        </property>
+        <property name="item6" type="int">
+            <column name="ITEM6" />
+        </property>
+        <property name="item7" type="int">
+            <column name="ITEM7" />
+        </property>
+        <property name="item8" type="int">
+            <column name="ITEM8" />
+        </property>
+        <property name="item9" type="int">
+            <column name="ITEM9" />
+        </property>
+        <property name="item10" type="int">
+            <column name="ITEM10" />
+        </property>
+        <property name="item11" type="int">
+            <column name="ITEM11" />
+        </property>
+        <property name="item12" type="int">
+            <column name="ITEM12" />
+        </property>
+        <property name="item13" type="int">
+            <column name="ITEM13" />
+        </property>
+        <property name="item14" type="int">
+            <column name="ITEM14" />
+        </property>
+        <property name="item15" type="int">
+            <column name="ITEM15" />
+        </property>
+        <property name="item16" type="int">
+            <column name="ITEM16" />
+        </property>
+        <property name="item17" type="int">
+            <column name="ITEM17" />
+        </property>
+        <property name="item18" type="int">
+            <column name="ITEM18" />
+        </property>
+        <property name="item19" type="int">
+            <column name="ITEM19" />
+        </property>
+        <property name="item20" type="int">
+            <column name="ITEM20" />
+        </property>
+    </class>
+</hibernate-mapping>

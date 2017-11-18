@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout resource="/jrpg-2017b-servidor/src/main/resources/personaje.hbm.xml">
+ <TreeFormPage>
+  <Memento type="FileHibernate3">
+   <Memento collapsed="false" type="File Hibernate 3.0"/>
+   <Memento collapsed="false" type="Advanced"/>
+   <Memento collapsed="false" type="Meta"/>
+   <Memento collapsed="false" type="Types"/>
+   <Memento collapsed="false" type="Imports"/>
+   <Memento collapsed="false" type="Classes"/>
+   <Memento collapsed="false" type="Queries"/>
+   <Memento collapsed="false" type="Filters"/>
+  </Memento>
+  <Memento type="Hibernate3Class">
+   <Memento collapsed="false" type="Class"/>
+   <Memento collapsed="false" type="Properties"/>
+   <Memento collapsed="false" type="Subclasses"/>
+   <Memento collapsed="false" type="Meta"/>
+   <Memento collapsed="false" type="Filters"/>
+   <Memento collapsed="false" type="Synchronize"/>
+   <Memento collapsed="false" type="Advanced"/>
+  </Memento>
+  <Memento type="">
+   <Memento collapsed="false" type="Properties Editor"/>
+  </Memento>
+  <Memento type="%No text%">
+   <Memento collapsed="false" type="Properties"/>
+  </Memento>
+ </TreeFormPage>
+</Layout>

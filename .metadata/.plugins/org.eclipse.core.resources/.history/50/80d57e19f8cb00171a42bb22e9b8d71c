@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2017 21:33:23 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntInventario" table="ENTINVENTARIO">
+        <id name="idInventario" type="int">
+            <column name="IDINVENTARIO" />
+            <generator class="assigned" />
+        </id>
+        <property name="manos1" type="int">
+            <column name="MANOS1" />
+        </property>
+        <property name="manos2" type="int">
+            <column name="MANOS2" />
+        </property>
+        <property name="pie" type="int">
+            <column name="PIE" />
+        </property>
+        <property name="cabeza" type="int">
+            <column name="CABEZA" />
+        </property>
+        <property name="pecho" type="int">
+            <column name="PECHO" />
+        </property>
+        <property name="accesorio" type="int">
+            <column name="ACCESORIO" />
+        </property>
+    </class>
+</hibernate-mapping>

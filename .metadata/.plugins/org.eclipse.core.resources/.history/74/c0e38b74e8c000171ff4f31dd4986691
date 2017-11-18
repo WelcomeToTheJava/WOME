@@ -1,7 +1,0 @@
-package movimiento;
-
-import java.awt.image.BufferedImage;
-
-public interface Movimiento {
-	public BufferedImage movimiento();
-}

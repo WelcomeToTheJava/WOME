@@ -1,0 +1,157 @@
+package entidades;
+
+import java.io.Serializable;
+import java.util.LinkedList;
+
+import org.hibernate.Session;
+
+public class EntItem implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	private int idItem;
+	private String nombre;
+	private int wareable;
+	private int bonisSalud;
+	private int bonusEnergia;
+	private int bonosFuerza;
+	private int bonusDestreza;
+	private int bonusInteligencia;
+	private String foto;
+	private String fotoEquipado;
+	private int fuerzaRequerida;
+	private int destrezaRequerida;
+	private int inteligenciarequerida;
+	
+	public EntItem() {
+		
+	}
+
+	@SuppressWarnings("unchecked")
+	public static LinkedList<EntItem> levantarItems(Acceso conexion){
+		Session session = conexion.getConfiguration().buildSessionFactory().openSession();
+		session.beginTransaction();
+		LinkedList<EntItem> listado = new LinkedList<>();
+		listado = (LinkedList<EntItem>) session.createQuery("SELECT FROM EntItem").list(); 
+		return listado;
+	}
+	
+	
+	public int getIdItem() {
+		return idItem;
+	}
+
+	public void setIdItem(int idItem) {
+		this.idItem = idItem;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getWareable() {
+		return wareable;
+	}
+
+	public void setWareable(int wareable) {
+		this.wareable = wareable;
+	}
+
+	public int getBonisSalud() {
+		return bonisSalud;
+	}
+
+	public void setBonisSalud(int bonisSalud) {
+		this.bonisSalud = bonisSalud;
+	}
+
+	public int getBonusEnergia() {
+		return bonusEnergia;
+	}
+
+	public void setBonusEnergia(int bonusEnergia) {
+		this.bonusEnergia = bonusEnergia;
+	}
+
+	public int getBonosFuerza() {
+		return bonosFuerza;
+	}
+
+	public void setBonosFuerza(int bonosFuerza) {
+		this.bonosFuerza = bonosFuerza;
+	}
+
+	public int getBonusDestreza() {
+		return bonusDestreza;
+	}
+
+	public void setBonusDestreza(int bonusDestreza) {
+		this.bonusDestreza = bonusDestreza;
+	}
+
+	public int getBonusInteligencia() {
+		return bonusInteligencia;
+	}
+
+	public void setBonusInteligencia(int bonusInteligencia) {
+		this.bonusInteligencia = bonusInteligencia;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getFotoEquipado() {
+		return fotoEquipado;
+	}
+
+	public void setFotoEquipado(String fotoEquipado) {
+		this.fotoEquipado = fotoEquipado;
+	}
+
+	public int getFuerzaRequerida() {
+		return fuerzaRequerida;
+	}
+
+	public void setFuerzaRequerida(int fuerzaRequerida) {
+		this.fuerzaRequerida = fuerzaRequerida;
+	}
+
+	public int getDestrezaRequerida() {
+		return destrezaRequerida;
+	}
+
+	public void setDestrezaRequerida(int destrezaRequerida) {
+		this.destrezaRequerida = destrezaRequerida;
+	}
+
+	public int getInteligenciarequerida() {
+		return inteligenciarequerida;
+	}
+
+	public void setInteligenciarequerida(int inteligenciarequerida) {
+		this.inteligenciarequerida = inteligenciarequerida;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public String toString() {
+		return "EntItem [idItem=" + idItem + ", nombre=" + nombre + ", wareable=" + wareable + ", bonisSalud="
+				+ bonisSalud + ", bonusEnergia=" + bonusEnergia + ", bonosFuerza=" + bonosFuerza + ", bonusDestreza="
+				+ bonusDestreza + ", bonusInteligencia=" + bonusInteligencia + ", foto=" + foto + ", fotoEquipado="
+				+ fotoEquipado + ", fuerzaRequerida=" + fuerzaRequerida + ", destrezaRequerida=" + destrezaRequerida
+				+ ", inteligenciarequerida=" + inteligenciarequerida + "]";
+	}
+	
+	
+}

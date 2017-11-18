@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2017 18:11:20 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+
+    <class name="entidades.EntPersonaje" table="personaje">
+        <id name="idPersonaje" type="int" column="idPersonaje" >
+         <generator class="increment" />
+        </id>
+        <property name="idInventario" type="int" column="idInventario" />
+        <property name="idMochila" type="int" column="idMochila" />
+        <property name="casta" type="java.lang.String" column="casta" />
+        <property name="raza" type="java.lang.String" column="raza" />
+        <property name="fuerza" type="int" column="fuerza" />
+        <property name="destreza" type="int" column="destreza" />
+        <property name="inteligencia" type="int" column="inteligencia" />
+        <property name="saludTope" type="int" column="saludTope" />
+        <property name="energiaTope" type="int" column="energiaTope" />
+        <property name="nombre" type="java.lang.String" column="nombre" />
+        <property name="experiencia" type="int" column="experiencia" />
+        <property name="nivel" type="int" column="nivel" />
+        <property name="idAlianza" type="int" column="idAlianza" />
+    </class>
+</hibernate-mapping>

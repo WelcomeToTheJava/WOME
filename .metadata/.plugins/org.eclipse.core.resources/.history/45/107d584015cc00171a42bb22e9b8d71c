@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2017 0:30:18 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntItem" table="item">
+        <id name="idItem" type="int"  column = "idItem"/>
+        <property name="nombre" type="java.lang.String" column="nombre" />
+        <property name="wereable" type="int" column = "wereable" />
+        <property name="bonusSalud" type="int" column="bonusSalud" />
+        <property name="bonusEnergia" type="int" column="bonusEnergia" />
+        <property name="bonusFuerza" type="int" column = "bonusFuerza" />
+        <property name="bonusDestreza" type="int" column ="bonusDestreza" />
+        <property name="bonusInteligencia" type="int" column="bonusInteligencia" />
+        <property name="foto" type="java.lang.String" column="foto" />
+        <property name="fotoEquipado" type="java.lang.String" column="fotoEquipado" />
+        <property name="fuerzaRequerida" type="int" column="fuerzaRequerida" />
+        <property name="destrezaRequerida" type="int" column ="destrezaRequerida" />
+        <property name="inteligenciarequerida" type="int" column="inteligenciarequerida" />
+    </class>
+</hibernate-mapping>

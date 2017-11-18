@@ -1,0 +1,35 @@
+package entidades;
+
+import java.io.Serializable;
+
+import mensajeria.PaquetePersonaje;
+import mensajeria.PaqueteUsuario;
+
+public class EntPersonaje implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
+	private int id;
+	private int idInventario;
+	private int idMochila;
+	private String casta;
+	private String raza;
+	private int fuerza;
+	private int destreza;
+	private int inteligencia;
+	private int saludTope;
+	private int energiaTope;
+	private String nombre;
+	private int experiencia;
+	private int nivel;
+	private int idAlianza;
+	
+	
+	public EntPersonaje(){
+		
+	}
+	
+	
+	
+	
+}

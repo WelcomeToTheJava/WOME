@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2017 22:22:56 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntMochila" table="mochila">
+        <id name="idMochila" type="int"  column="idMochila" />
+        <property name="item1" type="int"  column="item1" />
+        <property name="item2" type="int"  column="item2" />
+        <property name="item3" type="int"  column="item3" />
+         <property name="item4" type="int"  column="item4" />
+         <property name="item5" type="int"  column="item5" />
+         <property name="item6" type="int"  column="item6" />
+         <property name="item7" type="int"  column="item7" />
+         <property name="item8" type="int"  column="item8" />
+         <property name="item9" type="int"  column="item9" />
+         <property name="item10" type="int"  column="item10" />
+         <property name="item11" type="int"  column="item11" />
+         <property name="item12" type="int"  column="item12" />
+         <property name="item13" type="int"  column="item13" />
+         <property name="item14" type="int"  column="item14" />
+         <property name="item15" type="int"  column="item15" />
+         <property name="item16" type="int"  column="item16" />
+         <property name="item17" type="int"  column="item17" />
+         <property name="item18" type="int"  column="item18" />
+         <property name="item19" type="int"  column="item19" />
+         <property name="item20" type="int"  column="item20" />
+    </class>
+</hibernate-mapping>

@@ -1,5 +1,0 @@
-package movimiento;
-
-public class VerticalSuperior implements Movimiento{
-
-}

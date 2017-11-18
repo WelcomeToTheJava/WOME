@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestConector" project="jrpg-2017b-servidor" tests="7" started="7" failures="0" errors="1" ignored="0">
+  <testsuite name="testsServidor.TestConector" time="6.81">
+    <testcase name="testConexionConLaDB" classname="testsServidor.TestConector" time="0.719"/>
+    <testcase name="registrarPersonaje" classname="testsServidor.TestConector" time="5.464">
+      <error>javax.persistence.PersistenceException: org.hibernate.exception.LockAcquisitionException: could not execute statement&#13;
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)&#13;
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)&#13;
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:164)&#13;
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1443)&#13;
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493)&#13;
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3207)&#13;
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2413)&#13;
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:467)&#13;
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:156)&#13;
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38)&#13;
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231)&#13;
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:68)&#13;
+	at entidades.EntPersonaje.registrarPersonaje(EntPersonaje.java:59)&#13;
+	at testsServidor.TestConector.registrarPersonaje(TestConector.java:187)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.hibernate.exception.LockAcquisitionException: could not execute statement&#13;
+	at com.enigmabridge.hibernate.dialect.SQLiteDialect$2.convert(SQLiteDialect.java:252)&#13;
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)&#13;
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)&#13;
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3013)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3513)&#13;
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)&#13;
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:589)&#13;
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:463)&#13;
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)&#13;
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)&#13;
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1437)&#13;
+	... 33 more&#13;
+Caused by: org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)&#13;
+	at org.sqlite.core.DB.newSQLException(DB.java:909)&#13;
+	at org.sqlite.core.DB.newSQLException(DB.java:921)&#13;
+	at org.sqlite.core.DB.execute(DB.java:822)&#13;
+	at org.sqlite.core.DB.executeUpdate(DB.java:863)&#13;
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.executeUpdate(JDBC3PreparedStatement.java:99)&#13;
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)&#13;
+	... 42 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testRegistrarUsuario" classname="testsServidor.TestConector" time="0.018"/>
+    <testcase name="testLoginUsuarioFallido" classname="testsServidor.TestConector" time="0.027"/>
+    <testcase name="probarEntidadRegistro" classname="testsServidor.TestConector" time="0.0"/>
+    <testcase name="testLoginUsuario" classname="testsServidor.TestConector" time="0.021"/>
+    <testcase name="testRegistrarPersonaje" classname="testsServidor.TestConector" time="0.561"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,63 @@
+package entidades;
+
+import java.io.Serializable;
+
+public class EntMochila implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private int idMochila;
+	private int item1;
+	private int item2;
+	private int item3;
+	private int item4;
+	private int item5;
+	private int item6;
+	private int item7;
+	private int item8;
+	private int item9;
+	private int item10;
+	private int item11;
+	private int item12;
+	private int item13;
+	private int item14;
+	private int item15;
+	private int item16;
+	private int item17;
+	private int item18;
+	private int item19;
+	private int item20;
+	
+	
+	public EntMochila(){
+		
+	}
+	
+	public EntMochila(int idMochila){
+		this.idMochila = idMochila;
+		this.item1 = -1;
+		this.item2 = -1;
+		this.item3= -1;
+		this.item4= -1;
+		this.item5= -1;
+		this.item6= -1;
+		this.item7= -1;
+		this.item8= -1;
+		this.item9= -1;
+		this.item10= -1;
+		this.item11= -1;
+		this.item12= -1;
+		this.item13= -1;
+		this.item14= -1;
+		this.item15= -1;
+		this.item16= -1;
+		this.item17= -1;
+		this.item18= -1;
+		this.item19= -1;
+		this.item20= -1;
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,193 @@
+package testsServidor;
+
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.util.Random;
+import org.junit.Assert;
+import org.junit.Test;
+
+import entidades.EntPersonaje;
+import entidades.EntRegistro;
+import mensajeria.PaquetePersonaje;
+import mensajeria.PaqueteUsuario;
+import servidor.Conector;
+import servidor.Servidor;
+import junit.extensions.*;
+public class TestConector {
+	
+	private String getRandomString() {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 8) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+
+    }
+	@Test
+	public void testConexionConLaDB() {
+		new Servidor();
+		Servidor.main(null);
+
+		Conector conector = new Conector();
+		conector.connect();
+
+		// Pasado este punto la conexi�n con la base de datos result� exitosa
+
+		Assert.assertEquals(1, 1);
+
+		conector.close();
+	}
+
+	@Test
+	public void testRegistrarUsuario() {
+		new Servidor();
+		Servidor.main(null);
+
+		Conector conector = new Conector();
+		conector.connect();
+
+		PaqueteUsuario pu = new PaqueteUsuario();
+		pu.setUsername("UserTest");
+		pu.setPassword("test");
+
+		conector.registrarUsuario(pu);
+
+		pu = conector.getUsuario("UserTest");
+
+		Assert.assertEquals("UserTest", pu.getUsername());
+
+		conector.close();
+	}
+
+	@Test
+	public void testRegistrarPersonaje() throws IOException {
+		new Servidor();
+		Servidor.main(null);
+
+		Conector conector = new Conector();
+		conector.connect();
+		String randomero = getRandomString();
+		PaquetePersonaje pp = new PaquetePersonaje();
+		pp.setCasta("Humano");
+		pp.setDestreza(1);
+		pp.setEnergiaTope(1);
+		pp.setExperiencia(1);
+		pp.setFuerza(1);
+		pp.setInteligencia(1);
+		pp.setNivel(1);
+		pp.setNombre(randomero);
+		pp.setRaza("Asesino");
+		pp.setSaludTope(1);
+
+		PaqueteUsuario pu = new PaqueteUsuario();
+		pu.setUsername(getRandomString());
+		pu.setPassword("test");
+
+		conector.registrarUsuario(pu);
+		conector.registrarPersonaje(pp, pu);
+		
+		pp = conector.getPersonaje(pu);
+
+		Assert.assertEquals(randomero, pp.getNombre());
+		conector.close();
+	}
+
+	@Test
+	public void testLoginUsuario() {
+		new Servidor();
+		Servidor.main(null);
+
+		Conector conector = new Conector();
+		conector.connect();
+
+		PaqueteUsuario pu = new PaqueteUsuario();
+		pu.setUsername("UserTest");
+		pu.setPassword("test");
+
+		conector.registrarUsuario(pu);
+
+		boolean resultadoLogin = conector.loguearUsuario(pu);
+
+		Assert.assertEquals(true, resultadoLogin);
+
+		conector.close();
+	}
+
+	@Test
+	public void testLoginUsuarioFallido() {
+		new Servidor();
+		Servidor.main(null);
+
+		Conector conector = new Conector();
+		conector.connect();
+
+		PaqueteUsuario pu = new PaqueteUsuario();
+		pu.setUsername("userInventado");
+		pu.setPassword("test");
+
+		boolean resultadoLogin = conector.loguearUsuario(pu);
+
+		Assert.assertEquals(false, resultadoLogin);
+
+		conector.close();
+	}
+	
+//	@Test
+//	public void probarEntidadRegistro() {
+//		
+//		assertEquals(false, EntRegistro.registrarUsuario(new PaqueteUsuario(1,"Sergio", "232323")));
+//
+//		/*
+//		Configuration cfg = new Configuration();
+//		cfg.configure("hibernate.cfg.xml");
+//
+//		SessionFactory factory = cfg.buildSessionFactory();
+//		Session session = factory.openSession();
+//		EntRegistro reg = new EntRegistro();
+//
+//		reg.setIdPersonaje(1);
+//		reg.setPassword("25656");
+//		reg.setUsuario("Fede");
+//
+//		Transaction tx = session.beginTransaction();
+//		try {
+//			session.saveOrUpdate(reg);
+//			System.out.println("Se genero el registro con exito.....!!");
+//			
+//			tx.commit();
+//			
+////			CriteriaBuilder cb = session.getCriteriaBuilder();
+////			CriteriaQuery<Registro> cq = cb.createQuery(Registro.class);
+////			Root<Registro> rp = cq.from(Registro.class);
+////			//cq.select(rp).where(cb.like(rp.get("nombre"), "%s%"));
+////			LinkedList<Registro> lista = (LinkedList<Registro>) session.createQuery(cq).getResultList();
+////			for(Registro p : lista) {
+////				System.out.println(p);
+////			}
+//		} catch (HibernateException e) {
+//			e.printStackTrace();
+//		} finally {
+//			factory.close();
+//			session.close();
+//		}
+//		session.close();
+//		*/
+//	}
+	
+	@Test
+	public void registrarPersonaje() {
+		try {
+			PaquetePersonaje pa = new PaquetePersonaje();
+			PaqueteUsuario pu = new PaqueteUsuario();
+			EntPersonaje.registrarPersonaje(pa, pu);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

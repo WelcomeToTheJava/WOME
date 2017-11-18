@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-nov-2017 18:11:20 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntPersonaje" table="personaje">
+        <id name="idPersonaje" type="int" access="field">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="idInventario" type="int" access="field">
+            <column name="IDINVENTARIO" />
+        </property>
+        <property name="idMochila" type="int" access="field">
+            <column name="IDMOCHILA" />
+        </property>
+        <property name="casta" type="java.lang.String" access="field">
+            <column name="CASTA" />
+        </property>
+        <property name="raza" type="java.lang.String" access="field">
+            <column name="RAZA" />
+        </property>
+        <property name="fuerza" type="int" access="field">
+            <column name="FUERZA" />
+        </property>
+        <property name="destreza" type="int" access="field">
+            <column name="DESTREZA" />
+        </property>
+        <property name="inteligencia" type="int" access="field">
+            <column name="INTELIGENCIA" />
+        </property>
+        <property name="saludTope" type="int" access="field">
+            <column name="SALUDTOPE" />
+        </property>
+        <property name="energiaTope" type="int" access="field">
+            <column name="ENERGIATOPE" />
+        </property>
+        <property name="nombre" type="java.lang.String" access="field">
+            <column name="NOMBRE" />
+        </property>
+        <property name="experiencia" type="int" access="field">
+            <column name="EXPERIENCIA" />
+        </property>
+        <property name="nivel" type="int" access="field">
+            <column name="NIVEL" />
+        </property>
+        <property name="idAlianza" type="int" access="field">
+            <column name="IDALIANZA" />
+        </property>
+    </class>
+</hibernate-mapping>

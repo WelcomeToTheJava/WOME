@@ -1,0 +1,215 @@
+package entidades;
+
+import java.io.Serializable;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import mensajeria.PaquetePersonaje;
+import mensajeria.PaqueteUsuario;
+
+public class EntPersonaje implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
+	private int idPersonaje;
+	private int idInventario;
+	private int idMochila;
+	private String casta;
+	private String raza;
+	private int fuerza;
+	private int destreza;
+	private int inteligencia;
+	private int saludTope;
+	private int energiaTope;
+	private String nombre;
+	private int experiencia;
+	private int nivel;
+	private int idAlianza;
+	
+	public EntPersonaje(){}
+	public EntPersonaje(PaquetePersonaje paquetePersonaje){
+		this.idInventario = -1;
+		this.idMochila = -1;
+		this.casta = paquetePersonaje.getCasta();
+		this.raza = paquetePersonaje.getRaza();
+		this.fuerza = paquetePersonaje.getFuerza();
+		this.destreza = paquetePersonaje.getDestreza();
+		this.inteligencia = paquetePersonaje.getInteligencia();
+		this.saludTope = paquetePersonaje.getSaludTope();
+		this.energiaTope = paquetePersonaje.getEnergiaTope();
+		this.nombre = paquetePersonaje.getNombre();
+		this.experiencia = 0;
+		this.nivel = 1;
+		this.idAlianza = -1;
+	}
+	
+	
+	private static EntPersonaje cargarPaquete(PaquetePersonaje paquetePersonaje) {
+		return new EntPersonaje(paquetePersonaje);
+	}
+	
+	
+	public static boolean registrarPersonaje(PaquetePersonaje paquetePersonaje, PaqueteUsuario paqueteUsuario) {
+		EntPersonaje personaje = cargarPaquete(paquetePersonaje);
+		Session session = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory().openSession();
+		session.beginTransaction();
+		
+		try {
+			session.saveOrUpdate(personaje);
+			session.getTransaction().commit();
+		} catch (HibernateException | SecurityException e) {
+			session.getTransaction().getRollbackOnly();
+			e.printStackTrace();
+			return false;
+		} finally {
+			session.getSessionFactory().close();
+			session.close();
+		}
+		return true;
+	}
+
+
+	public int getIdPersonaje() {
+		return idPersonaje;
+	}
+
+
+	public int getIdInventario() {
+		return idInventario;
+	}
+
+
+	public int getIdMochila() {
+		return idMochila;
+	}
+
+
+	public String getCasta() {
+		return casta;
+	}
+
+
+	public String getRaza() {
+		return raza;
+	}
+
+
+	public int getFuerza() {
+		return fuerza;
+	}
+
+
+	public int getDestreza() {
+		return destreza;
+	}
+
+
+	public int getInteligencia() {
+		return inteligencia;
+	}
+
+
+	public int getSaludTope() {
+		return saludTope;
+	}
+
+
+	public int getEnergiaTope() {
+		return energiaTope;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public int getExperiencia() {
+		return experiencia;
+	}
+
+
+	public int getNivel() {
+		return nivel;
+	}
+
+
+	public int getIdAlianza() {
+		return idAlianza;
+	}
+
+
+	public void setIdPersonaje(int idPersonaje) {
+		this.idPersonaje = idPersonaje;
+	}
+
+
+	public void setIdInventario(int idInventario) {
+		this.idInventario = idInventario;
+	}
+
+
+	public void setIdMochila(int idMochila) {
+		this.idMochila = idMochila;
+	}
+
+
+	public void setCasta(String casta) {
+		this.casta = casta;
+	}
+
+
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+
+
+	public void setFuerza(int fuerza) {
+		this.fuerza = fuerza;
+	}
+
+
+	public void setDestreza(int destreza) {
+		this.destreza = destreza;
+	}
+
+
+	public void setInteligencia(int inteligencia) {
+		this.inteligencia = inteligencia;
+	}
+
+
+	public void setSaludTope(int saludTope) {
+		this.saludTope = saludTope;
+	}
+
+
+	public void setEnergiaTope(int energiaTope) {
+		this.energiaTope = energiaTope;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public void setExperiencia(int experiencia) {
+		this.experiencia = experiencia;
+	}
+
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
+
+
+	public void setIdAlianza(int idAlianza) {
+		this.idAlianza = idAlianza;
+	}
+	
+	
+}

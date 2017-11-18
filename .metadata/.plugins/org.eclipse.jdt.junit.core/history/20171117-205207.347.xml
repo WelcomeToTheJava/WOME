@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestConector" project="jrpg-2017b-servidor" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="testsServidor.TestConector" time="4.865">
+    <testcase name="testConexionConLaDB" classname="testsServidor.TestConector" time="0.753"/>
+    <testcase name="registrarPersonaje" classname="testsServidor.TestConector" time="3.068"/>
+    <testcase name="testRegistrarUsuario" classname="testsServidor.TestConector" time="0.019"/>
+    <testcase name="testLoginUsuarioFallido" classname="testsServidor.TestConector" time="0.02"/>
+    <testcase name="probarEntidadRegistro" classname="testsServidor.TestConector" time="0.0"/>
+    <testcase name="testLoginUsuario" classname="testsServidor.TestConector" time="0.023"/>
+    <testcase name="testRegistrarPersonaje" classname="testsServidor.TestConector" time="0.981"/>
+  </testsuite>
+</testrun>

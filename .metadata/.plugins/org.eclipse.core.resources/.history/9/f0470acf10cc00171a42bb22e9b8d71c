@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2017 0:30:18 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entidades.EntItem" table="ENTITEM">
+        <id name="idItem" type="int">
+            <column name="IDITEM" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="wareable" type="int">
+            <column name="WAREABLE" />
+        </property>
+        <property name="bonisSalud" type="int">
+            <column name="BONISSALUD" />
+        </property>
+        <property name="bonusEnergia" type="int">
+            <column name="BONUSENERGIA" />
+        </property>
+        <property name="bonosFuerza" type="int">
+            <column name="BONOSFUERZA" />
+        </property>
+        <property name="bonusDestreza" type="int">
+            <column name="BONUSDESTREZA" />
+        </property>
+        <property name="bonusInteligencia" type="int">
+            <column name="BONUSINTELIGENCIA" />
+        </property>
+        <property name="foto" type="java.lang.String">
+            <column name="FOTO" />
+        </property>
+        <property name="fotoEquipado" type="java.lang.String">
+            <column name="FOTOEQUIPADO" />
+        </property>
+        <property name="fuerzaRequerida" type="int">
+            <column name="FUERZAREQUERIDA" />
+        </property>
+        <property name="destrezaRequerida" type="int">
+            <column name="DESTREZAREQUERIDA" />
+        </property>
+        <property name="inteligenciarequerida" type="int">
+            <column name="INTELIGENCIAREQUERIDA" />
+        </property>
+    </class>
+</hibernate-mapping>

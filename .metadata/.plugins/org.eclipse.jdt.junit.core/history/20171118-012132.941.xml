@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestConector" project="jrpg-2017b-servidor" tests="9" started="9" failures="0" errors="1" ignored="0">
+  <testsuite name="testsServidor.TestConector" time="3.687">
+    <testcase name="testConexionConLaDB" classname="testsServidor.TestConector" time="0.679"/>
+    <testcase name="testRegistrarUsuario" classname="testsServidor.TestConector" time="0.025"/>
+    <testcase name="asignarMochila" classname="testsServidor.TestConector" time="0.0"/>
+    <testcase name="testLoginUsuarioFallido" classname="testsServidor.TestConector" time="0.018"/>
+    <testcase name="probarEntidadRegistro" classname="testsServidor.TestConector" time="2.261">
+      <error>org.hibernate.MappingException: Could not get constructor for org.hibernate.persister.entity.SingleTableEntityPersister&#13;
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:123)&#13;
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:77)&#13;
+	at org.hibernate.metamodel.internal.MetamodelImpl.initialize(MetamodelImpl.java:128)&#13;
+	at org.hibernate.internal.SessionFactoryImpl.&lt;init&gt;(SessionFactoryImpl.java:301)&#13;
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:452)&#13;
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:710)&#13;
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:726)&#13;
+	at entidades.EntRegistro.registrarUsuario(EntRegistro.java:37)&#13;
+	at testsServidor.TestConector.probarEntidadRegistro(TestConector.java:148)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]&#13;
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:91)&#13;
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:116)&#13;
+	at org.hibernate.tuple.entity.EntityMetamodel.&lt;init&gt;(EntityMetamodel.java:385)&#13;
+	at org.hibernate.persister.entity.AbstractEntityPersister.&lt;init&gt;(AbstractEntityPersister.java:519)&#13;
+	at org.hibernate.persister.entity.SingleTableEntityPersister.&lt;init&gt;(SingleTableEntityPersister.java:124)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.hibernate.persister.internal.PersisterFactoryImpl.createEntityPersister(PersisterFactoryImpl.java:96)&#13;
+	... 31 more&#13;
+Caused by: java.lang.reflect.InvocationTargetException&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:88)&#13;
+	... 40 more&#13;
+Caused by: org.hibernate.PropertyNotFoundException: Could not locate setter method for property [entidades.EntItem#bonusFuerza]&#13;
+	at org.hibernate.internal.util.ReflectHelper.findSetterMethod(ReflectHelper.java:572)&#13;
+	at org.hibernate.property.access.internal.PropertyAccessBasicImpl.&lt;init&gt;(PropertyAccessBasicImpl.java:44)&#13;
+	at org.hibernate.property.access.internal.PropertyAccessStrategyBasicImpl.buildPropertyAccess(PropertyAccessStrategyBasicImpl.java:27)&#13;
+	at org.hibernate.mapping.Property.getGetter(Property.java:308)&#13;
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertyGetter(PojoEntityTuplizer.java:254)&#13;
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.&lt;init&gt;(AbstractEntityTuplizer.java:151)&#13;
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.&lt;init&gt;(PojoEntityTuplizer.java:58)&#13;
+	... 45 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testLoginUsuario" classname="testsServidor.TestConector" time="0.013"/>
+    <testcase name="asignarInventario" classname="testsServidor.TestConector" time="0.0"/>
+    <testcase name="testRegistrarPersonaje" classname="testsServidor.TestConector" time="0.69"/>
+    <testcase name="levantarItems" classname="testsServidor.TestConector" time="0.001"/>
+  </testsuite>
+</testrun>
