@@ -7,5 +7,5 @@ Incrementos realizados al juego
 * Generar el paquete enemigos
 * Realizar los checkstyle pedidos
 -------------------------------------------------------------------------
-## Congigna 4 
+## Consigna 4 
 * Todo
